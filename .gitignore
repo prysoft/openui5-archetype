@@ -86,5 +86,4 @@ fabric.properties
 /openui5-simplecharts/
 
 # Some custom project ignores
-launch.ant
 start.bat
