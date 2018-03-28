@@ -1,0 +1,121 @@
+.sap-ui-custom-extra .sapThemeNegativeText {
+    color: #e52929;
+}
+
+.sap-ui-custom-extra .appRootStyle .login-view-page .sapMPanelContent {
+    background-color: transparent;
+    border: none;
+}
+
+/* ----- Short side menu option begin ----- */
+/* Side menu panel */
+/*.sap-ui-custom-extra.sap-phone .sapTntToolPageAsideCollapsed .sapTntToolPageAside {
+    -webkit-transform: translateX(-3rem);
+    transform: translateX(-3rem);
+}
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAside {width:3rem;}
+.sap-ui-custom-extra .sapTntToolPageAside::before {
+    content: '';
+    display: block;
+    height:4px;
+    background-color: transparent;
+}
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAside::before {
+    background-color: coral;
+}
+.sap-ui-custom-extra.sap-phone .sapTntSideNavigation {width:3rem;}
+
+.sap-ui-custom-extra.sap-phone .sapTntToolPageMain {
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem);
+}
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAsideCollapsed .sapTntToolPageMain {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}*/
+/* stop unnecessary animation for sapTntToolPageMain padding change on initial show up */
+/*html:not([data-sap-ui-animation='off']).sap-ui-custom-extra:not(.sap-phone) .sapTntToolPageMain {
+    -webkit-transition: unset;
+    transition: unset;
+}*/
+
+/* Side menu background */
+/*.sap-ui-custom-extra.sap-phone .sapTntToolPageAside::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    height:100%;
+    z-index: -1;
+    background-color: #000;
+    opacity: 0.2;
+    width: calc(100vw + 3rem);
+}
+
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAsideCollapsed .sapTntToolPageAside::after {
+    opacity: 0.0;
+    width:0;
+}
+
+html:not([data-sap-ui-animation='off']).sap-ui-custom-extra.sap-phone .sapTntToolPageAside::after {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}*/
+/* ----- Short side menu option end ----- */
+
+/* ----- Long side menu option begin ----- */
+/* Side menu panel */
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAsideCollapsed .sapTntToolPageAside {
+    -webkit-transform: translateX(-15rem);
+    transform: translateX(-15rem);
+}
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAside {width:15rem;}
+.sap-ui-custom-extra .sapTntToolPageAside::before {
+    content: '';
+    display: block;
+    height:4px;
+    background-color: transparent;
+}
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAside::before {
+    background-color: coral;
+    background: linear-gradient(to right, coral 60%, rgba(255,127,80,0.2));
+}
+.sap-ui-custom-extra.sap-phone .sapTntSideNavigation {width:15rem;}
+
+.sap-ui-custom-extra.sap-phone .sapTntToolPageMain {
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem);
+}
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAsideCollapsed .sapTntToolPageMain {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+/* stop unnecessary animation for sapTntToolPageMain padding change on initial show up */
+html:not([data-sap-ui-animation='off']).sap-ui-custom-extra:not(.sap-phone) .sapTntToolPageMain {
+    -webkit-transition: unset;
+    transition: unset;
+}
+
+/* Side menu background */
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAside::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    height:100%;
+    z-index: -1;
+    background-color: #000;
+    opacity: 0.2;
+    width: calc(100vw + 15rem);
+}
+
+.sap-ui-custom-extra.sap-phone .sapTntToolPageAsideCollapsed .sapTntToolPageAside::after {
+    opacity: 0.0;
+    width:0;
+}
+
+html:not([data-sap-ui-animation='off']).sap-ui-custom-extra.sap-phone .sapTntToolPageAside::after {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+/* ----- Long side menu option end ----- */

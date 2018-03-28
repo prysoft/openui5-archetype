@@ -1,0 +1,20 @@
+<mvc:View controllerName="com.thecompany.theproject.controller.Home"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m">
+
+    <!--<SplitContainer id="autoSplit" mode="StretchCompressMode">-->
+        <!--<masterPages>-->
+        <!--</masterPages>-->
+        <!--<detailPages>-->
+            <Page id="autoSplitDetailMap" showHeader="false" class="sapUiStdPage">
+                <content>
+                    <FlexBox fitContainer="true" direction="Column">
+                        <items>
+                            <Text text="ТЕСТ" />
+                        </items>
+                    </FlexBox>
+                </content>
+            </Page>
+        <!--</detailPages>-->
+    <!--</SplitContainer>-->
+</mvc:View>

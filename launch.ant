@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="PROJECT_NAME" default="runChromeDefault">
+    <echo level="info" message="ant.version=${ant.version}"/>
+    <echo level="info" message="ant.java.version=${ant.java.version}"/>
+    <echo level="info" message="ant.project.name=${ant.project.name}"/>
+    <echo level="info" message="ant.project.default-target=${ant.project.default-target}"/>
+    <!--<echo level="info" message="ant.project.invoked-targets=${ant.project.invoked-targets}"/>-->
+    <echo level="info" message="ant.core.lib=${ant.core.lib}"/>
+    <echo level="info" message="ant.home=${ant.home}"/>
+    <echo level="info" message="ant.library.dir=${ant.library.dir}${line.separator}-----"/>
+
+    <echo level="info" message="ant.file=${ant.file}"/>
+    <echo level="info" message="user.home=${user.home}"/>
+    <echo level="info" message="user.dir=${user.dir}"/>
+    <echo level="info" message="basedir=${basedir}${line.separator}-----"/>
+
+    <property name="chromePath" location="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+    <property name="chromeDataDir" location="${user.home}\${ant.project.name}_chrome_dev_session" />
+    <property name="webappIndex" location="${basedir}/index.html" />
+
+    <target name="runChromeDefault">
+        <echo level="info" message="Launching chrome..."/>
+        <exec executable="cmd.exe">
+            <!-- example -->
+            <!--<arg line="/c start cmd.exe /k echo test2" />-->
+            <!--<arg line="/c start.bat" />-->
+            <!-- start.bat contents: start "CHROME" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -.-user-data-dir="D:\Chrome_dev_session" -.-disable-web-security "%~dp0index.html" -->
+            <arg line="/k start chrome --user-data-dir=&quot;${chromeDataDir}&quot; --disable-web-security &quot;${webappIndex}&quot;" />
+        </exec>
+    </target>
+
+    <target name="runChrome">
+        <echo level="info" message="Launching chrome..."/>
+        <exec executable="${chromePath}" spawn="true">
+            <arg value="--user-data-dir=&quot;${chromeDataDir}&quot;" />
+            <arg value="--disable-web-security" />
+            <arg value="${webappIndex}" />
+        </exec>
+    </target>
+</project>

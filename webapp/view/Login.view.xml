@@ -1,0 +1,27 @@
+<mvc:View controllerName="com.thecompany.theproject.controller.Login"
+          xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc">
+
+    <FlexBox class="login-view-page" fitContainer="true" alignItems="Center" justifyContent="Center" direction="Column">
+        <items>
+            <!--<Label text="ЗАГОЛОВОК" class="text-small-italic" />-->
+            <Panel id="auth-form" class="sapUiResponsiveMargin" width="auto">
+                <content>
+                    <Input id="auth-form-lgn" submit="checkCredentials" liveChange="clearStatus" />
+                    <FlexBox>
+                        <items>
+                            <Input id="auth-form-psw" type="Password" submit="checkCredentials" liveChange="clearStatus" />
+                            <Button icon="sap-icon://process" press="checkCredentials" class="sapUiTinyMarginBegin" />
+                        </items>
+                    </FlexBox>
+                </content>
+            </Panel>
+            <FlexBox direction="Column" height="0">
+                <BusyIndicator id="auth-form-bi" visible="false" size="0.875rem" />
+                <MessageStrip id="auth-form-status" type="Error" visible="false" showIcon="true" />
+                <!--<Text id="auth-form-status" class="sapThemeNegativeText" />-->
+            </FlexBox>
+        </items>
+    </FlexBox>
+
+</mvc:View>

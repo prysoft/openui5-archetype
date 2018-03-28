@@ -1,0 +1,64 @@
+<mvc:View controllerName="com.thecompany.theproject.controller.AppTools"
+          xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:tnt="sap.tnt"
+          xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+    <tnt:ToolPage id="toolPage" sideExpanded="false">
+<!--
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button icon="sap-icon://menu2" type="Transparent" visible="{device>/system/phone}" press="onSideNavButtonPress">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Button>
+                <ToolbarSpacer width="3rem" visible="{= !${device>/system/phone} }" />
+                <Label text="{i18n>appTitle}"/>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://log" type="Transparent" press="onExitPress">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Button>
+            </tnt:ToolHeader>
+        </tnt:header>
+-->
+        <tnt:sideContent>
+            <tnt:SideNavigation itemSelect="onSideNavItemSelect">
+                <tnt:item>
+                    <tnt:NavigationList>
+                        <tnt:NavigationListItem app:params="start" text="{i18n>tAuto}" icon="sap-icon://car-rental" />
+                        <tnt:NavigationListItem app:params="techState" text="{i18n>tTechState}" icon="sap-icon://wrench" />
+                        <tnt:NavigationListItem app:params="fuelCsm" text="Отчёты" icon="sap-icon://document-text" />
+                    </tnt:NavigationList>
+                </tnt:item>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <!--<tnt:ToolPage id="toolPageInner" sideExpanded="false">-->
+                <!--<tnt:header>-->
+                    <tnt:ToolHeader>
+                        <Button icon="sap-icon://menu2" type="Transparent" visible="{device>/system/phone}" press="onSideNavButtonPress">
+                            <layoutData>
+                                <OverflowToolbarLayoutData priority="NeverOverflow" />
+                            </layoutData>
+                        </Button>
+                        <ToolbarSpacer width="3rem" visible="{= !${device>/system/phone} }" />
+                        <Label text="{i18n>appTitle}"/>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://log" type="Transparent" press="onExitPress">
+                            <layoutData>
+                                <OverflowToolbarLayoutData priority="NeverOverflow" />
+                            </layoutData>
+                        </Button>
+                    </tnt:ToolHeader>
+                <!--</tnt:header>-->
+                <!--<tnt:mainContents>-->
+                    <NavContainer id="mainContainer" />
+                <!--</tnt:mainContents>-->
+            <!--</tnt:ToolPage>-->
+        </tnt:mainContents>
+    </tnt:ToolPage>
+
+</mvc:View>

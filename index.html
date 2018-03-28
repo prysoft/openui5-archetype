@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="sap-ui-custom-extra">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>{ НАИМЕНОВАНИЕ ПРОЕКТА }</title>
+
+    <script id="sap-ui-bootstrap"
+            src="openui5-runtime-1.50.5/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_belize"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-preload="async"
+            data-sap-ui-resourceroots='{"com.thecompany.theproject": "./webapp/","com.thecompany.theproject.view": "./webapp/view/","com.thecompany.theproject.controller":"./webapp/controller/","com.thecompany.theproject.control":"./webapp/control/","com.thecompany.theproject.config":"./webapp/config/"}'
+            data-sap-ui-language="ru">
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.require([
+                'sap/m/Shell',
+                'sap/ui/core/ComponentContainer'
+            ], function (Shell, ComponentContainer) {
+                new Shell({
+                    app: new ComponentContainer({
+                        name: 'com.thecompany.theproject',
+                        height: '100%'
+                    })
+                }).placeAt('content');
+            });
+        });
+    </script>
+
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>
