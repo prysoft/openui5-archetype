@@ -10,7 +10,7 @@
                 <content>
                     <FlexBox fitContainer="true" direction="Column">
                         <items>
-                            <Text text="ТЕСТ" />
+                            <Text text="Стартовая страница" />
                         </items>
                     </FlexBox>
                 </content>

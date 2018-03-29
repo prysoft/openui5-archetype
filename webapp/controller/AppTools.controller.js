@@ -30,7 +30,7 @@ sap.ui.define([
         onSideNavItemSelect: function(oEvent) {
             var item = oEvent.getParameter('item'); // returns tnt:NavigationListItem
             var routeName = item.data('params');
-            if (!routeName || routeName.indexOf('start') < 0) {
+            if (!routeName || routeName.indexOf('home') < 0 && routeName.indexOf('logout') < 0) {
                 this.getView().byId('toolPage').setSideExpanded(false);
                 MessageToast.show('Раздел "' + item.getText() + '" временно недоступен');
                 return;
@@ -38,7 +38,12 @@ sap.ui.define([
 
             setTimeout((function(){
                 this.getView().byId('toolPage').setSideExpanded(false);
-            }).bind(this), 300);
+            }).bind(this), 0);
+
+            if (routeName.indexOf('logout') >= 0) {
+                this.onExitPress();
+                return;
+            }
 
             this.getRouter().navTo(routeName);
         }

@@ -28,11 +28,17 @@
             <tnt:SideNavigation itemSelect="onSideNavItemSelect">
                 <tnt:item>
                     <tnt:NavigationList>
-                        <tnt:NavigationListItem app:params="start" text="{i18n>tAuto}" icon="sap-icon://car-rental" />
-                        <tnt:NavigationListItem app:params="techState" text="{i18n>tTechState}" icon="sap-icon://wrench" />
-                        <tnt:NavigationListItem app:params="fuelCsm" text="Отчёты" icon="sap-icon://document-text" />
+                        <tnt:NavigationListItem app:params="home" text="{i18n>smHome}" icon="sap-icon://home" />
+                        <tnt:NavigationListItem app:params="notif" text="{i18n>smNotif}" icon="sap-icon://bell" />
+                        <tnt:NavigationListItem app:params="map" text="{i18n>smMap}" icon="sap-icon://globe" />
+                        <tnt:NavigationListItem app:params="settings" text="{i18n>smSettings}" icon="sap-icon://settings" />
                     </tnt:NavigationList>
                 </tnt:item>
+                <tnt:fixedItem>
+                    <tnt:NavigationList>
+                        <tnt:NavigationListItem app:params="logout" text="{i18n>smLogout}" icon="sap-icon://log" />
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
             </tnt:SideNavigation>
         </tnt:sideContent>
         <tnt:mainContents>
@@ -44,10 +50,10 @@
                                 <OverflowToolbarLayoutData priority="NeverOverflow" />
                             </layoutData>
                         </Button>
-                        <ToolbarSpacer width="3rem" visible="{= !${device>/system/phone} }" />
+                        <ToolbarSpacer width="1rem" visible="{= !${device>/system/phone} }" />
                         <Label text="{i18n>appTitle}"/>
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://log" type="Transparent" press="onExitPress">
+                        <Button icon="sap-icon://sys-help" type="Transparent">
                             <layoutData>
                                 <OverflowToolbarLayoutData priority="NeverOverflow" />
                             </layoutData>
