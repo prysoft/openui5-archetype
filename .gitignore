@@ -80,7 +80,8 @@ fabric.properties
 *.ipr
 
 # OpenUI5 runtime
-/openui5-runtime-1.50.5/
+/openui5-runtime-*/
+openui5-runtime-*
 
 # OpenUI5 extra modules
 /openui5-simplecharts/
